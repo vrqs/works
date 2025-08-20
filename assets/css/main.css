@@ -1,0 +1,141 @@
+/*
+ * Main.css
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-1: #0B0A10;
+  --color-primary-2: #24232E;
+  --color-primary-3: #414051;
+  --color-primary-4: #605E76;
+  --color-primary-5: #818094;
+  --color-primary-6: #A4A3B2;
+  --color-primary-7: #DCDBE3;
+  --color-primary-8: #EEEEF0;
+
+  --color-border: #0b0a1014;
+  
+  --col-width: 80px;
+  --gap-width: 20px;
+  --container-width: 580px;
+}
+
+@font-face {
+  font-family: "GeistMono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  color: var(--color-primary-1);
+  background-color: var(--color-primary-8);
+  font-family: "GeistMono", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: antialiased;
+}
+
+p,
+.body-1 {
+  font-size: 16px;
+  letter-spacing: -.1px;
+  line-height: 24px;
+  font-weight: 450;
+}
+
+p a {
+  text-decoration: none;
+  color: var(--color-primary-1);
+  font-weight: 650;
+  background-color: var(--color-primary-7);
+  padding-inline: 2px;
+}
+
+.heading-2 {
+  font-size: 20px;
+  letter-spacing: -.2px;
+  line-height: 24px;
+  font-weight: 550;
+}
+
+.-color-secondary {
+  color: var(--color-primary-5);
+}
+
+.button-label {
+  text-decoration: none;
+  color: var(--color-primary-1);
+  border: 1.5px solid var(--color-primary-1);
+  border-radius: 20px;
+  padding: 0 8px;
+  font-weight: 450;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  grid-gap: var(--gap-width);
+  grid-template-columns: calc(
+    calc(var(--col-width) * 2) + var(--gap-width))
+    1fr;
+}
+
+.grid .col-2 {
+  grid-column: 2;
+}
+
+/*
+ * Header
+ */
+.site-header {
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.site-header h1 {
+  margin-bottom: 4px;
+}
+
+.avatar-wrapper {
+  padding: 0 4px 4px 4px;
+  border: 1px solid var(--color-border);
+  border-top: 0;
+  display: flex;
+  width: fit-content;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.avatar {
+  width: 100px;
+  height: 140px;
+  object-fit: cover; 
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/*
+ * Content
+ */
+.content p + p {
+  margin-top: 8px;
+}
+
+/*
+ * Social Links
+ */
+.social-links {
+  padding: 40px 0;
+}

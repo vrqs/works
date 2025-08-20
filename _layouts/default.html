@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header grid">
+        <div class="avatar-wrapper">
+          <img
+            class="avatar"
+            src="{{ '/assets/images/profile.jpg' }}"
+            alt="{{ site.title }}"
+          >
+        </div>
+
+        <div class="intro">
+          <h1 class="heading-2">{{ site.title }}</h1>
+          <h2 class="body-1 -color-secondary">{{ site.description }}</h2>
+        </div>
+      </header>
+      
+      <main class="grid">
+        <div class="content col-2">
+          {{ content }}
+        </div>
+      </main>
+
+      {% if site.social_links %}
+        <section class="social-links grid">
+          <nav class="links col-2">
+            {% for link in site.social_links %}
+              <a class="button-label" href="{{ link.url }}" target="_blank">{{ link.label }}</a>
+            {% endfor %}
+          </nav>
+        </section>
+      {% endif %}
+    </div>
+  </body>
+</html>
