@@ -73,6 +73,10 @@ a {
   color: var(--color-primary-1);
   border-bottom: 1px dotted;
   text-decoration: none;
+
+  &:hover {
+    opacity: .6;
+  }
 }
 
 .heading-2 {
@@ -184,6 +188,10 @@ section.notes {
   a {
     display: block;
     border: none;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .note-title {
