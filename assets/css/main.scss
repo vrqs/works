@@ -198,7 +198,7 @@ section.notes {
       font-size: 1.25rem;
       position: absolute;
       top: 3px;
-      left: -24px;
+      left: -1.25rem;
     }
   }
 
@@ -250,6 +250,12 @@ section.notes {
       flex-direction: row;
       padding-top: 1rem;
       order: 2;
+    }
+  }
+
+  section.notes {
+    ol li:not(:first-child) {
+      margin-left: 1rem;
     }
   }
 }
