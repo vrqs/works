@@ -8,7 +8,7 @@
 title: Vasco Marques
 email: hi@vrqsworks.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Builder for the web
+  I build websites
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 

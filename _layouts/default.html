@@ -9,13 +9,13 @@
   <body>
     <div class="container">
       <header class="site-header grid">
-        <div class="avatar-wrapper">
+        <a href="/" class="avatar-wrapper">
           <img
             class="avatar"
             src="{{ '/assets/images/profile.jpg' }}"
             alt="{{ site.title }}"
           >
-        </div>
+        </a>
 
         <div class="intro">
           <h1 class="heading-2">{{ site.title }}</h1>
@@ -40,7 +40,7 @@
       <section class="notes grid">
         <ol class="notes-list col-2">
           <li>
-            <h5 class="section-title body-1 -color-secondary">Notes</h5>
+            <h5 class="section-title body-2 -bold -color-secondary">Notes</h5>
           </li>
 
           {% for note in site.posts %}
