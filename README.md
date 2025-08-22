@@ -1,2 +1,2 @@
 # vrqsworks.com
-Website for [vrqsworks.com](www.vrqsworks.com)
+Website for [vrqsworks.com](https://www.vrqsworks.com)
