@@ -23,21 +23,41 @@
         </div>
       </header>
       
-      <main class="grid">
+      <main class="main-content grid">
+        {% if site.social_links %}
+          <nav class="social-links">
+            {% for link in site.social_links %}
+              <a class="button-label" href="{{ link.url }}" target="_blank">{{ link.label }}</a>
+            {% endfor %}
+          </nav>
+        {% endif %}
+
         <div class="content col-2">
           {{ content }}
         </div>
       </main>
 
-      {% if site.social_links %}
-        <section class="social-links grid">
-          <nav class="links col-2">
-            {% for link in site.social_links %}
-              <a class="button-label" href="{{ link.url }}" target="_blank">{{ link.label }}</a>
-            {% endfor %}
-          </nav>
-        </section>
-      {% endif %}
+      <section class="notes grid">
+        <ol class="notes-list col-2">
+          <li>
+            <h5 class="section-title body-1 -color-secondary">Notes</h5>
+          </li>
+
+          {% for note in site.posts %}
+            <li>
+              <a>
+                <article>
+                  <h4 class="note-title body-1 -bold">{{ note.title }}</h4>
+                  
+                  <div class="note-content-wrapper">
+                    {{ note.content }}
+                  </div>
+                </article>
+              </a>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
     </div>
   </body>
 </html>

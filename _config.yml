@@ -13,12 +13,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 social_links:
-  - x:
-    label: X/Twitter
-    url: https://x.com/vscmrqs
   - github:
     label: Github
     url: https://github.com/vrqs
+  - x:
+    label: X/Twitter
+    url: https://x.com/vscmrqs
   - email:
     label: Email
     url: mailto:vrqsworks@gmail.com
@@ -35,3 +35,8 @@ exclude:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+permalink: /:title
+
+sass:
+  style: compressed
